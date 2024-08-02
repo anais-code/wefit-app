@@ -1,0 +1,157 @@
+CRITICAL - 2024-04-27 00:08:30 --> BadMethodCallException: Call to undefined method App\Models\StaffModel::validateFStaffLogin
+in SYSTEMPATH\Model.php on line 879.
+ 1 APPPATH\Controllers\Login.php(37): CodeIgniter\Model->__call('validateFStaffLogin', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->login()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-04-27 00:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-27 00:09:19 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "floor_staff_dash.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('floor_staff_dash.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('floor_staff_dash', [], true)
+ 3 APPPATH\Controllers\StaffDashboard.php(9): view('floor_staff_dash')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\StaffDashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffDashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-04-27 00:26:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 00:26:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-27 00:26:52 --> BadMethodCallException: Call to undefined method App\Models\AppointmentModel::viewStaffAppointments
+in SYSTEMPATH\Model.php on line 879.
+ 1 APPPATH\Controllers\StaffDashboard.php(22): CodeIgniter\Model->__call('viewStaffAppointments', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\StaffDashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffDashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-04-27 00:31:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-27 00:31:05 --> BadMethodCallException: Call to undefined method App\Models\AppointmentModel::viewStaffAppointments
+in SYSTEMPATH\Model.php on line 879.
+ 1 APPPATH\Controllers\StaffDashboard.php(22): CodeIgniter\Model->__call('viewStaffAppointments', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\StaffDashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffDashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-04-27 00:32:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 00:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 00:34:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-27 00:34:39 --> mysqli_sql_exception: Unknown column 'staff.FirstName' in 'field list' in C:\xampp\htdocs\WeFit\wefitapp\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\WeFit\wefitapp\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `appoint...', 0)
+#1 C:\xampp\htdocs\WeFit\wefitapp\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `appoint...')
+#2 C:\xampp\htdocs\WeFit\wefitapp\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `appoint...')
+#3 C:\xampp\htdocs\WeFit\wefitapp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `appoint...', Array, false)
+#4 C:\xampp\htdocs\WeFit\wefitapp\system\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\WeFit\wefitapp\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\WeFit\wefitapp\app\Models\AppointmentModel.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\WeFit\wefitapp\app\Controllers\StaffDashboard.php(22): App\Models\AppointmentModel->viewStaffAppointments('5')
+#8 C:\xampp\htdocs\WeFit\wefitapp\system\CodeIgniter.php(943): App\Controllers\StaffDashboard->index()
+#9 C:\xampp\htdocs\WeFit\wefitapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffDashboard))
+#10 C:\xampp\htdocs\WeFit\wefitapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\WeFit\wefitapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-04-27 00:34:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'staff.FirstName' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `appointment`.*, `service`.`ServiceName`, `staff`.`FirstName`, `staff`.`LastName`
+FROM `appointment`
+JOIN `service` ON `service`.`ServiceID` = `appointment`.`ServiceID`
+JOIN `clubmember` ON `clubmember`.`MemberID` = `appointment`.`MemberID`
+WHERE `AppointmentDate` >= :AppointmentDate:', [...], false)
+ 2 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AppointmentModel.php(35): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\StaffDashboard.php(22): App\Models\AppointmentModel->viewStaffAppointments('5')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\StaffDashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffDashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 00:34:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'staff.FirstName' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `appointment`.*, `service`.`ServiceName`, `staff`.`FirstName`, `staff`.`LastName`
+FROM `appointment`
+JOIN `service` ON `service`.`ServiceID` = `appointment`.`ServiceID`
+JOIN `clubmember` ON `clubmember`.`MemberID` = `appointment`.`MemberID`
+WHERE `AppointmentDate` >= \'2024-04-27\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `appointment`.*, `service`.`ServiceName`, `staff`.`FirstName`, `staff`.`LastName`
+FROM `appointment`
+JOIN `service` ON `service`.`ServiceID` = `appointment`.`ServiceID`
+JOIN `clubmember` ON `clubmember`.`MemberID` = `appointment`.`MemberID`
+WHERE `AppointmentDate` >= \'2024-04-27\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `appointment`.*, `service`.`ServiceName`, `staff`.`FirstName`, `staff`.`LastName`
+FROM `appointment`
+JOIN `service` ON `service`.`ServiceID` = `appointment`.`ServiceID`
+JOIN `clubmember` ON `clubmember`.`MemberID` = `appointment`.`MemberID`
+WHERE `AppointmentDate` >= :AppointmentDate:', [...], false)
+ 4 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\AppointmentModel.php(35): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\StaffDashboard.php(22): App\Models\AppointmentModel->viewStaffAppointments('5')
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\StaffDashboard->index()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffDashboard))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-27 00:34:39 --> [Caused by] mysqli_sql_exception: Unknown column 'staff.FirstName' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `appointment`.*, `service`.`ServiceName`, `staff`.`FirstName`, `staff`.`LastName`
+FROM `appointment`
+JOIN `service` ON `service`.`ServiceID` = `appointment`.`ServiceID`
+JOIN `clubmember` ON `clubmember`.`MemberID` = `appointment`.`MemberID`
+WHERE `AppointmentDate` >= \'2024-04-27\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `appointment`.*, `service`.`ServiceName`, `staff`.`FirstName`, `staff`.`LastName`
+FROM `appointment`
+JOIN `service` ON `service`.`ServiceID` = `appointment`.`ServiceID`
+JOIN `clubmember` ON `clubmember`.`MemberID` = `appointment`.`MemberID`
+WHERE `AppointmentDate` >= \'2024-04-27\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `appointment`.*, `service`.`ServiceName`, `staff`.`FirstName`, `staff`.`LastName`
+FROM `appointment`
+JOIN `service` ON `service`.`ServiceID` = `appointment`.`ServiceID`
+JOIN `clubmember` ON `clubmember`.`MemberID` = `appointment`.`MemberID`
+WHERE `AppointmentDate` >= \'2024-04-27\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `appointment`.*, `service`.`ServiceName`, `staff`.`FirstName`, `staff`.`LastName`
+FROM `appointment`
+JOIN `service` ON `service`.`ServiceID` = `appointment`.`ServiceID`
+JOIN `clubmember` ON `clubmember`.`MemberID` = `appointment`.`MemberID`
+WHERE `AppointmentDate` >= :AppointmentDate:', [...], false)
+ 5 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\AppointmentModel.php(35): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\StaffDashboard.php(22): App\Models\AppointmentModel->viewStaffAppointments('5')
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\StaffDashboard->index()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffDashboard))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-04-27 00:35:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 00:42:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 00:45:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 00:45:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 00:47:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 00:47:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 00:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 00:56:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 00:56:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 00:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-27 00:58:50 --> ArgumentCountError: Too few arguments to function App\Models\AppointmentModel::viewAppointments(), 0 passed in C:\xampp\htdocs\WeFit\wefitapp\app\Controllers\ClubMemberDashboard.php on line 21 and exactly 1 expected
+in APPPATH\Models\AppointmentModel.php on line 20.
+ 1 APPPATH\Controllers\ClubMemberDashboard.php(21): App\Models\AppointmentModel->viewAppointments()
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\ClubMemberDashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClubMemberDashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-04-27 00:59:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 01:01:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 01:01:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 01:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 01:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 01:05:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 01:05:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 01:05:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 01:05:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 01:06:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 01:06:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 01:12:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 04:00:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 04:00:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 04:01:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 04:01:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 04:01:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 04:01:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
